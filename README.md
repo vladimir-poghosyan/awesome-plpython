@@ -53,5 +53,10 @@ or execute the scripts
 ```
 The [official documentation](https://www.postgresql.org/docs/current/app-psql.html) can further guide you through `psql` features.
 
+## Resources
+1. [PL/Python documentation](https://www.postgresql.org/docs/current/plpython.html)
+2. [Befriending an Elephant with a Snake: A Practical Guide to PL/Python](https://blog.vxsoft.com/2025/07/befriending-elephant-with-snake.html)
+3. [Getting Started with Postgres Functions in PL/Python](https://www.crunchydata.com/blog/getting-started-with-postgres-functions-in-plpython)
+
 ## License
 This project is licensed under the MIT License. See LICENSE for details.
