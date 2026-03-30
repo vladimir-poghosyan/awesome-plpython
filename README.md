@@ -73,10 +73,11 @@ The [official documentation](https://www.postgresql.org/docs/current/app-psql.ht
 * [token_urlsafe.sql](/scripts/token_urlsafe.sql) - Secure random [URL-safe token](https://docs.python.org/3/library/secrets.html#secrets.token_urlsafe) generation
 
 ### Data Processing
-* [permutations.sql](scripts/permutations.sql) - An aggregate for computing all permutations of `TEXT` values
-* [sentiment_analysis.sql](scripts/sentiment_analysis.sql) - Simple sentiment analysis function and sample usage
+* [permutations.sql](/scripts/permutations.sql) - An aggregate for computing all permutations of `TEXT` values
+* [sentiment_analysis.sql](/scripts/sentiment_analysis.sql) - Simple sentiment analysis function and sample usage
 
 ### Demonstrations / Experiments
+* [sqlite.sql](/scripts/sqlite.sql) - SQLite in PostgreSQL
 * [wsgi.sql](/scripts/wsgi.sql) - Minimal WSGI server running inside PostgreSQL (educational/demo only)
 
 ## Resources
