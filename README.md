@@ -12,6 +12,16 @@ A collection of [PL/Python](https://www.postgresql.org/docs/current/plpython.htm
 
 ---
 
+### ⚠️ PL/Python Caveats
+
+- PL/Python requires **superuser/administrative privileges** to install or create functions using `plpython3u`.  
+- Running Python code inside PostgreSQL can **block sessions** or impact performance if misused.  
+- Scripts using external Python libraries (`cryptography`, `textblob`) require the libraries to be **installed in the database environment**.  
+- Not recommended for **high-throughput per-row computations**; best suited for utility functions, small triggers, or demonstrations.  
+- Running servers or opening network sockets from PL/Python is **for educational purposes only**.
+
+---
+
 ## ⚠️ Disclaimer
 
 The provided Docker setup that boots a PostgreSQL instance with PL/Python enabled is intentionally **simple** and **does NOT follow production best practices**.
@@ -52,6 +62,21 @@ or execute the scripts
 \i /var/opt/scripts/fernet.sql
 ```
 The [official documentation](https://www.postgresql.org/docs/current/app-psql.html) can further guide you through `psql` features.
+
+## Script Reference
+### Text Utilities
+* [diff.sql](/scripts/diff.sql) - Compare text with optional HTML diff output
+
+### Security / Cryptography
+* [fernet.sql](/scripts/fernet.sql) - Symmetric encryption and decryption using [Fernet](https://cryptography.io/en/latest/fernet/)
+* [sha3_512.sql](/scripts/sha3_512.sql) - SHA3-512 hash
+* [token_urlsafe.sql](/scripts/token_urlsafe.sql) - Secure random [URL-safe token](https://docs.python.org/3/library/secrets.html#secrets.token_urlsafe) generation
+
+### Data Processing
+* [sentiment_analysis.sql](scripts/sentiment_analysis.sql) - Simple sentiment analysis function and sample usage
+
+### Demonstrations / Experiments
+* [wsgi.sql](/scripts/wsgi.sql) - Minimal WSGI server running inside PostgreSQL (educational/demo only)
 
 ## Resources
 1. [PL/Python documentation](https://www.postgresql.org/docs/current/plpython.html)
