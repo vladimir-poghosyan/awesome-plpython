@@ -77,6 +77,7 @@ The [official documentation](https://www.postgresql.org/docs/current/app-psql.ht
 * [sentiment_analysis.sql](/scripts/sentiment_analysis.sql) - Simple sentiment analysis function and sample usage
 
 ### Demonstrations / Experiments
+* [ip_location.sql](/scripts/ip_location.sql) - External API integration for IP geolocation
 * [sqlite.sql](/scripts/sqlite.sql) - SQLite in PostgreSQL
 * [wsgi.sql](/scripts/wsgi.sql) - Minimal WSGI server running inside PostgreSQL (educational/demo only)
 
