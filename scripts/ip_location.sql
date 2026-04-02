@@ -100,4 +100,4 @@ FROM
 
 
 -- Demo cleanup
--- DROP TABLE IF EXISTS access_log;
+DROP TABLE IF EXISTS access_log;
